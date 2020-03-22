@@ -129,19 +129,19 @@
 <meta name="keywords" content="catalina.out 日志 切割">
 <meta property="og:type" content="article">
 <meta property="og:title" content="catalina.out日志切割">
-<meta property="og:url" content="http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/index.html">
+<meta property="og:url" content="http://wsylp.top/2019/08/09/catalina-out日志切割/index.html">
 <meta property="og:site_name" content="搬砖码仔">
 <meta property="og:description" content="背景最近发现生产上tomcat下的日志catalina.out文件太大，影响排查问题以及写入写出性能。 百度了下发现有好多方法，但是我角色还是自己写个脚本就可以了，无需引用第三方的东西。 思路 找到文件所造路径，将之拷贝一份到新文件中 删除十天前的文件 将catalina.out内容清空  脚本1234567891011121314151617181920212223242526272829303">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/1.PNG">
-<meta property="og:image" content="http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/2.PNG">
-<meta property="og:image" content="http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/3.PNG">
-<meta property="og:image" content="http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/4.PNG">
+<meta property="og:image" content="http://wsylp.top/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/1.PNG">
+<meta property="og:image" content="http://wsylp.top/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/2.PNG">
+<meta property="og:image" content="http://wsylp.top/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/3.PNG">
+<meta property="og:image" content="http://wsylp.top/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/4.PNG">
 <meta property="og:updated_time" content="2020-01-02T02:47:50.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="catalina.out日志切割">
 <meta name="twitter:description" content="背景最近发现生产上tomcat下的日志catalina.out文件太大，影响排查问题以及写入写出性能。 百度了下发现有好多方法，但是我角色还是自己写个脚本就可以了，无需引用第三方的东西。 思路 找到文件所造路径，将之拷贝一份到新文件中 删除十天前的文件 将catalina.out内容清空  脚本1234567891011121314151617181920212223242526272829303">
-<meta name="twitter:image" content="http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/1.PNG">
+<meta name="twitter:image" content="http://wsylp.top/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/1.PNG">
 
 
 
@@ -150,7 +150,7 @@
 
 
 
-  <link rel="canonical" href="http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/">
+  <link rel="canonical" href="http://wsylp.top/2019/08/09/catalina-out日志切割/">
 
 
 
@@ -409,7 +409,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/">
+    <link itemprop="mainEntityOfPage" href="http://wsylp.top/2019/08/09/catalina-out日志切割/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wsylp">
@@ -562,10 +562,10 @@
 <li>将catalina.out内容清空</li>
 </ol>
 <h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># !/bin/base</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># catalina.out目录</span></span><br><span class="line">log_path=/usr/java/apache-tomcat-7.0.70/logs</span><br><span class="line">file_name=catalina.out</span><br><span class="line"></span><br><span class="line"><span class="comment">#文件绝对路径</span></span><br><span class="line">file_pa=<span class="variable">$&#123;log_path&#125;</span>/<span class="variable">$&#123;file_name&#125;</span></span><br><span class="line"></span><br><span class="line">today=`date +%y%m%d`</span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断文件是否存在</span></span><br><span class="line"><span class="keyword">if</span> [ ! -d <span class="variable">$&#123;log_path&#125;</span>/his ];<span class="keyword">then</span></span><br><span class="line">     mkdir <span class="variable">$&#123;log_path&#125;</span>/his</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 十天前</span></span><br><span class="line">day_ten_before=`date -d <span class="string">'10 days ago'</span> +%y%m%d`</span><br><span class="line"></span><br><span class="line"><span class="comment">#十天前的文件名</span></span><br><span class="line">file_be=<span class="variable">$&#123;log_path&#125;</span>/his/<span class="variable">$&#123;file_name&#125;</span>_<span class="variable">$&#123;day_ten_before&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#当天的文件名</span></span><br><span class="line">file_to=<span class="variable">$&#123;log_path&#125;</span>/his/<span class="variable">$&#123;file_name&#125;</span>_<span class="variable">$&#123;today&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#cp文件</span></span><br><span class="line">cp <span class="variable">$&#123;file_pa&#125;</span> <span class="variable">$&#123;file_to&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#清除catalina.out文件内容</span></span><br><span class="line"><span class="built_in">echo</span> &gt; <span class="variable">$&#123;file_pa&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除十天前切割的日志文件</span></span><br><span class="line"><span class="keyword">if</span> [ -f <span class="variable">$&#123;file_be&#125;</span> ];<span class="keyword">then</span></span><br><span class="line">	rm -rf <span class="variable">$&#123;file_be&#125;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-<h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h1><h2 id="运行前"><a href="#运行前" class="headerlink" title="运行前"></a>运行前</h2><img src="/wsylp/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/1.PNG">
-<img src="/wsylp/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/2.PNG">
-<h2 id="运行后"><a href="#运行后" class="headerlink" title="运行后"></a>运行后</h2><img src="/wsylp/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/3.PNG">
-<img src="/wsylp/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/4.PNG">
+<h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h1><h2 id="运行前"><a href="#运行前" class="headerlink" title="运行前"></a>运行前</h2><img src="/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/1.PNG">
+<img src="/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/2.PNG">
+<h2 id="运行后"><a href="#运行后" class="headerlink" title="运行后"></a>运行后</h2><img src="/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/3.PNG">
+<img src="/2019/08/09/catalina-out日志切割/08/09/catalina-out日志切割/4.PNG">
       
     </div>
 
@@ -587,8 +587,8 @@
   <p><span>文章作者:</span><a href="/" title="访问 wsylp 的个人博客">wsylp</a></p>
   <p><span>发布时间:</span>2019年08月09日 - 16:08</p>
   <p><span>最后更新:</span>2020年01月02日 - 10:01</p>
-  <p><span>原始链接:</span><a href="/2019/08/09/catalina-out日志切割/" title="catalina.out日志切割">http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/2019/08/09/catalina-out日志切割/" title="catalina.out日志切割">http://wsylp.top/2019/08/09/catalina-out日志切割/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://wsylp.top/2019/08/09/catalina-out日志切割/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">本文为 wsylp 版权所有</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -763,7 +763,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -802,7 +802,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -877,7 +881,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">31</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -976,7 +984,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">206k</span>
+    <span title="站点总字数">212k</span>
   
 
   
@@ -985,7 +993,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:07</span>
+    <span title="站点阅读时长">3:12</span>
   
 </div>
 

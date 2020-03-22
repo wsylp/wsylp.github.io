@@ -1,3 +1,3 @@
-http://weisylp.gitee.io/wsylp/2020/01/02/hello-world/
-http://weisylp.gitee.io/wsylp/2019/08/21/deepin安装mysql/
-http://weisylp.gitee.io/wsylp/2019/08/09/catalina-out日志切割/
+http://wsylp.top/2020/03/22/信贷知识与业务/
+http://wsylp.top/2020/03/22/日常学习回顾与汇总/
+http://wsylp.top/2019/08/21/deepin安装mysql/

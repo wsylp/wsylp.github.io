@@ -129,19 +129,19 @@
 <meta name="keywords" content="activiti">
 <meta property="og:type" content="article">
 <meta property="og:title" content="activiti初体验(八) 监听器">
-<meta property="og:url" content="http://weisylp.gitee.io/wsylp/2018/06/01/activiti初体验-八-监听器/index.html">
+<meta property="og:url" content="http://wsylp.top/2018/06/01/activiti初体验-八-监听器/index.html">
 <meta property="og:site_name" content="搬砖码仔">
 <meta property="og:description" content="监听器是activiti中经常使用的，一般用在启动或者关闭，以及流程流转的时候。  流程引擎的启动与监听 之前的配置文件中，有这么个配置：  12345678910111213141516171819202122232425/** * 用于监听流程引擎的启动与关闭 *  * @author wsylp * */@Service(&quot;myProcessEngineLifecycleListener&quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://weisylp.gitee.io/wsylp/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/1.png">
-<meta property="og:image" content="http://weisylp.gitee.io/wsylp/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/2.png">
-<meta property="og:image" content="http://weisylp.gitee.io/wsylp/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/3.png">
-<meta property="og:image" content="http://weisylp.gitee.io/wsylp/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/4.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/1.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/2.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/3.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/4.png">
 <meta property="og:updated_time" content="2020-01-02T02:47:50.580Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="activiti初体验(八) 监听器">
 <meta name="twitter:description" content="监听器是activiti中经常使用的，一般用在启动或者关闭，以及流程流转的时候。  流程引擎的启动与监听 之前的配置文件中，有这么个配置：  12345678910111213141516171819202122232425/** * 用于监听流程引擎的启动与关闭 *  * @author wsylp * */@Service(&quot;myProcessEngineLifecycleListener&quot;">
-<meta name="twitter:image" content="http://weisylp.gitee.io/wsylp/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/1.png">
+<meta name="twitter:image" content="http://wsylp.top/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/1.png">
 
 
 
@@ -150,7 +150,7 @@
 
 
 
-  <link rel="canonical" href="http://weisylp.gitee.io/wsylp/2018/06/01/activiti初体验-八-监听器/">
+  <link rel="canonical" href="http://wsylp.top/2018/06/01/activiti初体验-八-监听器/">
 
 
 
@@ -409,7 +409,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://weisylp.gitee.io/wsylp/2018/06/01/activiti初体验-八-监听器/">
+    <link itemprop="mainEntityOfPage" href="http://wsylp.top/2018/06/01/activiti初体验-八-监听器/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wsylp">
@@ -566,16 +566,16 @@
 <hr>
 <h3 id="开始与结束事件监听器"><a href="#开始与结束事件监听器" class="headerlink" title="开始与结束事件监听器"></a>开始与结束事件监听器</h3><hr>
 <p>正常的开启流程需要进行设置变量，指定代理人等信息，或者发送短信提醒，都可以使用事件监听器。</p>
-<img src="/wsylp/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/1.png">
-<img src="/wsylp/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/2.png">
+<img src="/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/1.png">
+<img src="/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/2.png">
 <hr>
 <p><strong>日志</strong></p>
 <hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[09:38:36:461] [INFO] - wsylp.service.impl.ActivitiListener.notify(ActivitiListener.java:35) - start=========</span><br></pre></td></tr></table></figure>
-<p>也可以使用spring管理，写入表达式，其中表达式为spring管理的bean的id<br><img src="/wsylp/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/3.png"></p>
+<p>也可以使用spring管理，写入表达式，其中表达式为spring管理的bean的id<br><img src="/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/3.png"></p>
 <hr>
 <h3 id="任务监听器"><a href="#任务监听器" class="headerlink" title="任务监听器"></a>任务监听器</h3><hr>
-<p>任务监听与开始的事件监听差不多<br><img src="/wsylp/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/4.png"></p>
+<p>任务监听与开始的事件监听差不多<br><img src="/2018/06/01/activiti初体验-八-监听器/06/01/activiti初体验-八-监听器/4.png"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> wsylp.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.activiti.engine.delegate.DelegateTask;</span><br><span class="line"><span class="keyword">import</span> org.activiti.engine.delegate.Expression;</span><br><span class="line"><span class="keyword">import</span> org.activiti.engine.delegate.TaskListener;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 节点监听器，任务监听器，连线监听器</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> wsylp</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyTaskListener</span> <span class="keyword">implements</span> <span class="title">TaskListener</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(ActivitiServiceImpl.class);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">6200534335483960408L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Expression arg;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Expression <span class="title">getArg</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> arg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setArg</span><span class="params">(Expression arg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.arg = arg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">notify</span><span class="params">(DelegateTask delegateTask)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 实现TaskListener中的方法</span></span><br><span class="line">        String eventName = delegateTask.getEventName();</span><br><span class="line">        LOGGER.info(<span class="string">"任务监听器:&#123;&#125;"</span>, arg.getValue(delegateTask));</span><br><span class="line">        <span class="keyword">if</span> (<span class="string">"create"</span>.endsWith(eventName)) &#123;</span><br><span class="line">            LOGGER.info(<span class="string">"create========="</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">"assignment"</span>.endsWith(eventName)) &#123;</span><br><span class="line">            LOGGER.info(<span class="string">"assignment========"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">"complete"</span>.endsWith(eventName)) &#123;</span><br><span class="line">            LOGGER.info(<span class="string">"complete==========="</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">"delete"</span>.endsWith(eventName)) &#123;</span><br><span class="line">            LOGGER.info(<span class="string">"delete============="</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p><strong>日志</strong></p>
@@ -604,8 +604,8 @@
   <p><span>文章作者:</span><a href="/" title="访问 wsylp 的个人博客">wsylp</a></p>
   <p><span>发布时间:</span>2018年06月01日 - 14:06</p>
   <p><span>最后更新:</span>2020年01月02日 - 10:01</p>
-  <p><span>原始链接:</span><a href="/2018/06/01/activiti初体验-八-监听器/" title="activiti初体验(八) 监听器">http://weisylp.gitee.io/wsylp/2018/06/01/activiti初体验-八-监听器/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://weisylp.gitee.io/wsylp/2018/06/01/activiti初体验-八-监听器/" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/2018/06/01/activiti初体验-八-监听器/" title="activiti初体验(八) 监听器">http://wsylp.top/2018/06/01/activiti初体验-八-监听器/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://wsylp.top/2018/06/01/activiti初体验-八-监听器/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">本文为 wsylp 版权所有</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -780,7 +780,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -819,7 +819,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -894,7 +898,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">31</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -993,7 +1001,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">206k</span>
+    <span title="站点总字数">212k</span>
   
 
   
@@ -1002,7 +1010,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:07</span>
+    <span title="站点阅读时长">3:12</span>
   
 </div>
 
