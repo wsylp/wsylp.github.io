@@ -133,12 +133,12 @@
 <meta property="og:site_name" content="搬砖码仔">
 <meta property="og:description" content="上篇博客讲到程序计数器与虚拟机栈，这次我们来聊一聊方法区与堆（Heap），还有本地方法栈。 本地方法栈简单的说本地方法栈我们没有必要了解太多，本地方法栈（Native Method Stack）的作用域虚拟机栈所发挥的作用类似，不过通过名字我们也能推测出，本地方法栈是用来执行Native方法的。它也会抛出stackOverflowerror和OutOfMemoryError。 堆Heap我们先来看">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
+<meta property="og:image" content="http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
 <meta property="og:updated_time" content="2020-01-02T02:47:50.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM之运行时数据区（二）方法区与堆">
 <meta name="twitter:description" content="上篇博客讲到程序计数器与虚拟机栈，这次我们来聊一聊方法区与堆（Heap），还有本地方法栈。 本地方法栈简单的说本地方法栈我们没有必要了解太多，本地方法栈（Native Method Stack）的作用域虚拟机栈所发挥的作用类似，不过通过名字我们也能推测出，本地方法栈是用来执行Native方法的。它也会抛出stackOverflowerror和OutOfMemoryError。 堆Heap我们先来看">
-<meta name="twitter:image" content="http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
+<meta name="twitter:image" content="http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
 
 
 
@@ -554,7 +554,7 @@
         <p>上篇博客讲到程序计数器与虚拟机栈，这次我们来聊一聊方法区与堆（Heap），还有本地方法栈。</p>
 <h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><p>简单的说本地方法栈我们没有必要了解太多，本地方法栈（Native Method Stack）的作用域虚拟机栈所发挥的作用类似，不过通过名字我们也能推测出，本地方法栈是用来执行Native方法的。它也会抛出stackOverflowerror和OutOfMemoryError。</p>
 <h3 id="堆Heap"><a href="#堆Heap" class="headerlink" title="堆Heap"></a>堆Heap</h3><p>我们先来看下这幅图先来了解下:</p>
-<img src="/2019/01/13/JVM之运行时数据区（二）方法区与堆/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
+<img src="/2019/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
 <p>java中的堆是java虚拟机中所管理的内存中最大的一块。从上面的图片中我们可以按到。<font color="red">java Heap是被线程共享的</font>。在java虚拟机规范中说明：所有对象实例以及数组都要在堆上进行分配，但是随着JIT编译器的发展与逃逸分析技术的逐渐成熟，栈上分配、标量替换技术将会导致一些微妙的变化发生，所有对象都分配在堆上也不在那么绝对了，也就是说<font color="red">堆是用来存放对象的空间，几乎所有的对象都存储在堆中</font>。</p>
 <p>我们也通过我所画的图形颜色可以看出java中的堆分为新生代与老年代，而新生代有分为Eden空间，From Survivor空间、To Survivor空间，也就是上图中的Eden、s0、s1。</p>
 <p>我们在这里先简单介绍下几个概念，至于新生代，老年代以及Eden 与survivor之间的比例如何划分，还有对象如何存放的，我们会在后面的垃圾回收器中会讲到内存的分配策略。</p>

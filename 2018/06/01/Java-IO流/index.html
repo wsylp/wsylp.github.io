@@ -133,12 +133,12 @@
 <meta property="og:site_name" content="搬砖码仔">
 <meta property="og:description" content="IO流IO流主要用来读写文件,而且很难理解.不过早实际的项目操作中也就简单的运用就能满足我们的需求. 先看看IO流的一些类 字节流字节流主要来对二进制进行操作的,它是以字节的来处理的.(简单的说使用记事本无法打开的,打开或者乱码的) OutputStreram:输出流,也就是写入文件中.简单使用:向文件中写入”hello World” 123456//字节输出流.写数据File file = ne">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wsylp.top/2018/06/01/Java-IO流/06/01/Java-IO流/io.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/Java-IO流/io.png">
 <meta property="og:updated_time" content="2020-01-02T02:47:50.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java IO流">
 <meta name="twitter:description" content="IO流IO流主要用来读写文件,而且很难理解.不过早实际的项目操作中也就简单的运用就能满足我们的需求. 先看看IO流的一些类 字节流字节流主要来对二进制进行操作的,它是以字节的来处理的.(简单的说使用记事本无法打开的,打开或者乱码的) OutputStreram:输出流,也就是写入文件中.简单使用:向文件中写入”hello World” 123456//字节输出流.写数据File file = ne">
-<meta name="twitter:image" content="http://wsylp.top/2018/06/01/Java-IO流/06/01/Java-IO流/io.png">
+<meta name="twitter:image" content="http://wsylp.top/2018/06/01/Java-IO流/io.png">
 
 
 
@@ -552,7 +552,7 @@
 
       
         <h2 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h2><p>IO流主要用来读写文件,而且很难理解.不过早实际的项目操作中也就简单的运用就能满足我们的需求.</p>
-<p>先看看IO流的一些类<br><img src="/2018/06/01/Java-IO流/06/01/Java-IO流/io.png"></p>
+<p>先看看IO流的一些类<br><img src="/2018/06/01/Java-IO流/io.png"></p>
 <h2 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h2><p>字节流主要来对二进制进行操作的,它是以字节的来处理的.(简单的说使用记事本无法打开的,打开或者乱码的)</p>
 <h2 id="OutputStreram"><a href="#OutputStreram" class="headerlink" title="OutputStreram"></a>OutputStreram</h2><p>:输出流,也就是写入文件中.<br>简单使用:<br>向文件中写入”hello World”</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//字节输出流.写数据</span></span><br><span class="line">File file = <span class="keyword">new</span> File(<span class="string">"f:\\demo\\io.txt"</span>);</span><br><span class="line"><span class="comment">//创建字节流输出对象</span></span><br><span class="line"></span><br><span class="line">FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(file); </span><br><span class="line">String content = <span class="string">"hello world"</span>; <span class="comment">//写数据 fos.write(content.getBytes()); //关闭资源 fos.close();</span></span><br></pre></td></tr></table></figure>

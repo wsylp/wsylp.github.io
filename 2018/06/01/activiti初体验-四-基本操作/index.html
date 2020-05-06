@@ -133,19 +133,19 @@
 <meta property="og:site_name" content="搬砖码仔">
 <meta property="og:description" content="流程图 流程图的常用元素很简单，开启，结束为必要的。一个完生的流程图如下所示：  左边为开始（startEvent），右边为结束(endEvent)，中间为活动(任务Task)，箭头的线 (SequenceFlow)开发之前我们需要给eclipse安装activiti插件，个人建议使用eclipse，感觉idea对流程图的插件支持不是很好。安装插件以及画流程图这里不再陈述，大家可以自己百度。 由于">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/1.png">
-<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/2.png">
-<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/3.png">
-<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/4.png">
-<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/5.png">
-<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/6.png">
-<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/7.png">
-<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/8.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/1.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/2.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/3.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/4.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/5.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/6.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/7.png">
+<meta property="og:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/8.png">
 <meta property="og:updated_time" content="2020-01-02T02:47:50.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="activiti初体验(四) 基本操作">
 <meta name="twitter:description" content="流程图 流程图的常用元素很简单，开启，结束为必要的。一个完生的流程图如下所示：  左边为开始（startEvent），右边为结束(endEvent)，中间为活动(任务Task)，箭头的线 (SequenceFlow)开发之前我们需要给eclipse安装activiti插件，个人建议使用eclipse，感觉idea对流程图的插件支持不是很好。安装插件以及画流程图这里不再陈述，大家可以自己百度。 由于">
-<meta name="twitter:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/1.png">
+<meta name="twitter:image" content="http://wsylp.top/2018/06/01/activiti初体验-四-基本操作/1.png">
 
 
 
@@ -560,22 +560,22 @@
       
         <h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><hr>
 <p>流程图的常用元素很简单，开启，结束为必要的。<br>一个完生的流程图如下所示：</p>
-<img src="/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/1.png">
+<img src="/2018/06/01/activiti初体验-四-基本操作/1.png">
 <p>左边为开始（startEvent），右边为结束(endEvent)，中间为活动(任务Task)，箭头的线 (SequenceFlow)<br>开发之前我们需要给eclipse安装activiti插件，个人建议使用eclipse，感觉idea对流程图的插件支持不是很好。<br>安装插件以及画流程图这里不再陈述，大家可以自己百度。</p>
 <p>由于设计开发中activiti提供的用户相关的表很难满足我们项目的需要，一般使用项目本身的角色信息表。<br>而且在开发中审批人甚少指定为某一个人，一般为角色。<br>在之前的工作中使用的为分离式的流程引擎，配置角色生产与测试经常要维护两个表，不方便，这里提供了自己的一个实现逻辑。</p>
 <p>简单配置</p>
 <hr>
 <h3 id="配置流程"><a href="#配置流程" class="headerlink" title="配置流程"></a>配置流程</h3><hr>
-<p>点击空白处—-》eclipse窗口会出现属性的配置：配置id(流程图的id)与name（流程图的名称）<br><img src="/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/2.png"></p>
+<p>点击空白处—-》eclipse窗口会出现属性的配置：配置id(流程图的id)与name（流程图的名称）<br><img src="/2018/06/01/activiti初体验-四-基本操作/2.png"></p>
 <hr>
 <h3 id="配置人"><a href="#配置人" class="headerlink" title="配置人"></a>配置人</h3><hr>
 <p>点击请假审批的task，填写id与name（当前活动的id与name），再点击<strong><em>Main config</em></strong>，再assiness框中填写任务代理人，图片中的表达式为获取该流程中的变量，变量的属性为：<strong><em>createLoginName</em></strong></p>
-<img src="/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/3.png">
-<img src="/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/4.png">
+<img src="/2018/06/01/activiti初体验-四-基本操作/3.png">
+<img src="/2018/06/01/activiti初体验-四-基本操作/4.png">
 <hr>
 <p>设置审批【副总】的审批人，此时使用的为角色，查询待办时，是根据登录人查询出角色再次进行查询待办任务的。</p>
 <hr>
-<img src="/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/5.png">
+<img src="/2018/06/01/activiti初体验-四-基本操作/5.png">
 <hr>
 <h3 id="流程发布"><a href="#流程发布" class="headerlink" title="流程发布"></a>流程发布</h3><hr>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deplomentActiviti</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       String folderPath = <span class="string">"study/activiti/diagrams/leaveBill"</span>;</span><br><span class="line">       HashMap&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">       map.put(<span class="string">"name"</span>, <span class="string">"请假流程"</span>);<span class="comment">// 名称</span></span><br><span class="line">       map.put(<span class="string">"id"</span>, <span class="string">"leaveBill"</span>);<span class="comment">// id</span></span><br><span class="line">       map.put(<span class="string">"category"</span>, <span class="string">"办公流程"</span>);<span class="comment">// 类别</span></span><br><span class="line">       activitiService.devlopActiviti(folderPath, map);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">devlopActiviti</span><span class="params">(String folderPath, HashMap&lt;String, String&gt; map)</span> </span>&#123;</span><br><span class="line">       Deployment deploy = repositoryService.createDeployment()<span class="comment">// 创建一个部署构建器</span></span><br><span class="line">               .addClasspathResource(folderPath + File.separator + map.get(<span class="string">"id"</span>) + <span class="string">".bpmn"</span>)<span class="comment">// 从类路径一次只能添加一个文件</span></span><br><span class="line">               .addClasspathResource(folderPath + File.separator + map.get(<span class="string">"id"</span>) + <span class="string">".png"</span>)<span class="comment">// 流程图片</span></span><br><span class="line">               .name(map.get(<span class="string">"name"</span>)).category(map.get(<span class="string">"category"</span>)).deploy();</span><br><span class="line"></span><br><span class="line">       LOGGER.info(<span class="string">"流程名称【 &#123;&#125;】"</span>, deploy.getName());</span><br><span class="line">       LOGGER.info(<span class="string">"流程id【&#123;&#125;】"</span>, deploy.getId());</span><br><span class="line">       LOGGER.info(<span class="string">"流程类别【&#123;&#125;】"</span>, deploy.getCategory());</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
@@ -585,8 +585,8 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">18</span>:<span class="number">18</span>:<span class="number">11</span>:<span class="number">735</span>] [INFO] - wsylp.service.impl.ActivitiServiceImpl.devlopActiviti(ActivitiServiceImpl.java:<span class="number">95</span>) - 流程名称【 请假流程】</span><br><span class="line">[<span class="number">18</span>:<span class="number">18</span>:<span class="number">11</span>:<span class="number">735</span>] [INFO] - wsylp.service.impl.ActivitiServiceImpl.devlopActiviti(ActivitiServiceImpl.java:<span class="number">96</span>) - 流程id【<span class="number">1</span>】</span><br><span class="line">[<span class="number">18</span>:<span class="number">18</span>:<span class="number">11</span>:<span class="number">735</span>] [INFO] - wsylp.service.impl.ActivitiServiceImpl.devlopActiviti(ActivitiServiceImpl.java:<span class="number">97</span>) - 流程类别【办公流程】</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><hr>
-<img src="/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/6.png">
-<img src="/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/7.png">
+<img src="/2018/06/01/activiti初体验-四-基本操作/6.png">
+<img src="/2018/06/01/activiti初体验-四-基本操作/7.png">
 <hr>
 <h3 id="开启流程"><a href="#开启流程" class="headerlink" title="开启流程"></a>开启流程</h3><hr>
 <p>由于第一个工作项审批人Assignee为“#{createLoginName}”,在进行开启任务的时候需要设置createLoginName参数：</p>
@@ -612,7 +612,7 @@
 <hr>
 <p>数据库信息：</p>
 <hr>
-<img src="/2018/06/01/activiti初体验-四-基本操作/06/01/activiti初体验-四-基本操作/8.png">
+<img src="/2018/06/01/activiti初体验-四-基本操作/8.png">
 <hr>
 <h3 id="完成任务"><a href="#完成任务" class="headerlink" title="完成任务"></a>完成任务</h3><hr>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">finshTask</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String taskId = <span class="string">"2513"</span>;</span><br><span class="line">        activitiService.finshTask(taskId);</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">finshTask</span><span class="params">(String taskId)</span> </span>&#123;</span><br><span class="line">        taskService.complete(taskId);</span><br><span class="line">        LOGGER.info(<span class="string">"完成任务【&#123;&#125;】"</span>, taskId);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>

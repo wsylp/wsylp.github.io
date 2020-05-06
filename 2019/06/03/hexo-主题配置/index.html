@@ -133,14 +133,14 @@
 <meta property="og:site_name" content="搬砖码仔">
 <meta property="og:description" content="首页概览  搭建好hexo后，我们发现正常的情况下首页显示的为一片博客的全部内容，这样就会导致我们一直下拉才可以找到下一篇博客，很繁琐，我们想要看到该博客的概览即可。  打开theme主题下的_config.yml，找到auto_excerpt，将enable改为true。 12345# Automatically Excerpt. Not recommend.# Please use &amp;lt;!">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://wsylp.top/2019/06/03/hexo-主题配置/06/03/hexo-主题配置/1.png">
-<meta property="og:image" content="http://wsylp.top/2019/06/03/hexo-主题配置/06/03/hexo-主题配置/2.png">
-<meta property="og:image" content="http://wsylp.top/2019/06/03/hexo-主题配置/06/03/hexo-主题配置/1.png">
+<meta property="og:image" content="http://wsylp.top/2019/06/03/hexo-主题配置/1.png">
+<meta property="og:image" content="http://wsylp.top/2019/06/03/hexo-主题配置/2.png">
+<meta property="og:image" content="http://wsylp.top/2019/06/03/hexo-主题配置/1.png">
 <meta property="og:updated_time" content="2020-01-02T02:47:50.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo 主题配置">
 <meta name="twitter:description" content="首页概览  搭建好hexo后，我们发现正常的情况下首页显示的为一片博客的全部内容，这样就会导致我们一直下拉才可以找到下一篇博客，很繁琐，我们想要看到该博客的概览即可。  打开theme主题下的_config.yml，找到auto_excerpt，将enable改为true。 12345# Automatically Excerpt. Not recommend.# Please use &amp;lt;!">
-<meta name="twitter:image" content="http://wsylp.top/2019/06/03/hexo-主题配置/06/03/hexo-主题配置/1.png">
+<meta name="twitter:image" content="http://wsylp.top/2019/06/03/hexo-主题配置/1.png">
 
 
 
@@ -560,8 +560,8 @@
 <p>打开theme主题下的_config.yml，找到auto_excerpt，将enable改为true。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Automatically Excerpt. Not recommend.</span></span><br><span class="line"><span class="comment"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span></span><br><span class="line"><span class="attr">auto_excerpt:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  length:</span> <span class="number">150</span></span><br></pre></td></tr></table></figure>
 <p>下面有两个对比图，一个为改之前的，一个为改之后的。</p>
-<img src="/2019/06/03/hexo-主题配置/06/03/hexo-主题配置/1.png">
-<img src="/2019/06/03/hexo-主题配置/06/03/hexo-主题配置/2.png">
+<img src="/2019/06/03/hexo-主题配置/1.png">
+<img src="/2019/06/03/hexo-主题配置/2.png">
 <h2 id="自定义样式"><a href="#自定义样式" class="headerlink" title="自定义样式"></a>自定义样式</h2><blockquote>
 <p>在使用的过程中发现hexo 6 默认的为水平实线为虚线，看起来好丑。故才进行改动。</p>
 </blockquote>
@@ -570,7 +570,7 @@
 <p>将hr的标签内容复制下，然后改为我们想要的结果。自定义样式放在theme==&gt;next==&gt;source==&gt;css==&gt;_custom==&gt;custom.style文件中。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// Custom styles.</span><br><span class="line">// 主页文章添加阴影效果</span><br><span class="line"> <span class="selector-class">.post</span> &#123;</span><br><span class="line">   <span class="attribute">margin-top</span>: <span class="number">60px</span>;</span><br><span class="line">   <span class="attribute">margin-bottom</span>: <span class="number">60px</span>;</span><br><span class="line">   <span class="attribute">padding</span>: <span class="number">25px</span>;</span><br><span class="line">   <span class="attribute">-webkit-box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(202, 203, 203, .5);</span><br><span class="line">   <span class="attribute">-moz-box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(202, 203, 204, .5);</span><br><span class="line">  &#125;</span><br><span class="line"> //将hr改为实线</span><br><span class="line">  <span class="selector-tag">hr</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">40px</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ddd</span>;</span><br><span class="line">  <span class="attribute">background-image</span>: none;</span><br><span class="line">&#125;</span><br><span class="line">//将h2、h3、h4、h5、h6标签的颜色进行改变</span><br><span class="line"><span class="selector-tag">h2</span>,<span class="selector-tag">h3</span>,<span class="selector-tag">h4</span>,<span class="selector-tag">h5</span>,<span class="selector-tag">h6</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#92b10b</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上述为我的修改内容，上面注释也很清楚</p>
-<img src="/2019/06/03/hexo-主题配置/06/03/hexo-主题配置/1.png">
+<img src="/2019/06/03/hexo-主题配置/1.png">
 <h2 id="看板娘"><a href="#看板娘" class="headerlink" title="看板娘"></a>看板娘</h2><p>也就是下面的小姑娘了。</p>
 <p>安装 hexo-helper-live2d</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
