@@ -1,3 +1,3 @@
-http://wsylp.top/2020/03/22/信贷知识与业务/
-http://wsylp.top/2020/03/22/日常学习回顾与汇总/
-http://wsylp.top/2019/08/21/deepin安装mysql/
+http://weisylp.gitee.io/blob/2020/03/22/信贷知识与业务/
+http://weisylp.gitee.io/blob/2020/03/22/日常学习回顾与汇总/
+http://weisylp.gitee.io/blob/2019/08/21/deepin安装mysql/
