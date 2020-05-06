@@ -73,21 +73,21 @@
 
 
 
-<link href="/blob/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/blob/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blob/images/apple-touch-icon-next.png?v=6.6.0">
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/blob/images/wsylp.jpg?v=6.6.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/blob/images/wsylp.jpg?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/wsylp.jpg?v=6.6.0">
 
 
-  <link rel="mask-icon" href="/blob/images/logo.svg?v=6.6.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/wsylp.jpg?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
@@ -100,7 +100,7 @@
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/blob/',
+    root: '/',
     scheme: 'Gemini',
     version: '6.6.0',
     sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
@@ -129,25 +129,25 @@
 <meta name="keywords" content="JVM,运行时数据区,Java Heap,方法区">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM之运行时数据区（二）方法区与堆">
-<meta property="og:url" content="http://weisylp.gitee.io/blob/2019/01/13/JVM之运行时数据区（二）方法区与堆/index.html">
+<meta property="og:url" content="http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/index.html">
 <meta property="og:site_name" content="搬砖码仔">
 <meta property="og:description" content="上篇博客讲到程序计数器与虚拟机栈，这次我们来聊一聊方法区与堆（Heap），还有本地方法栈。 本地方法栈简单的说本地方法栈我们没有必要了解太多，本地方法栈（Native Method Stack）的作用域虚拟机栈所发挥的作用类似，不过通过名字我们也能推测出，本地方法栈是用来执行Native方法的。它也会抛出stackOverflowerror和OutOfMemoryError。 堆Heap我们先来看">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://weisylp.gitee.io/blob/blob/2019/01/13/JVM之运行时数据区（二）方法区与堆/2019/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
+<meta property="og:image" content="http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
 <meta property="og:updated_time" content="2020-01-02T02:47:50.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM之运行时数据区（二）方法区与堆">
 <meta name="twitter:description" content="上篇博客讲到程序计数器与虚拟机栈，这次我们来聊一聊方法区与堆（Heap），还有本地方法栈。 本地方法栈简单的说本地方法栈我们没有必要了解太多，本地方法栈（Native Method Stack）的作用域虚拟机栈所发挥的作用类似，不过通过名字我们也能推测出，本地方法栈是用来执行Native方法的。它也会抛出stackOverflowerror和OutOfMemoryError。 堆Heap我们先来看">
-<meta name="twitter:image" content="http://weisylp.gitee.io/blob/blob/2019/01/13/JVM之运行时数据区（二）方法区与堆/2019/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
+<meta name="twitter:image" content="http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
 
 
 
-  <link rel="alternate" href="/blob/atom.xml" title="搬砖码仔" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="搬砖码仔" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="http://weisylp.gitee.io/blob/2019/01/13/JVM之运行时数据区（二）方法区与堆/">
+  <link rel="canonical" href="http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/">
 
 
 
@@ -215,7 +215,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/blob/" class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">搬砖码仔</span>
         <span class="logo-line-after"><i></i></span>
@@ -257,7 +257,7 @@
 
     
 
-    <a href="/blob/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
         
@@ -274,7 +274,7 @@
 
     
 
-    <a href="/blob/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
         
@@ -291,7 +291,7 @@
 
     
 
-    <a href="/blob/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
         
@@ -308,7 +308,7 @@
 
     
 
-    <a href="/blob/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
@@ -325,7 +325,7 @@
 
     
 
-    <a href="/blob/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
 
@@ -406,12 +406,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://weisylp.gitee.io/blob/blob/2019/01/13/JVM之运行时数据区（二）方法区与堆/">
+    <link itemprop="mainEntityOfPage" href="http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wsylp">
       <meta itemprop="description" content="天行健，君子以自强不息">
-      <meta itemprop="image" content="/blob/images/wsylp.jpg">
+      <meta itemprop="image" content="/images/wsylp.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -482,7 +482,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blob/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a></span>
 
                 
                 
@@ -554,7 +554,7 @@
         <p>上篇博客讲到程序计数器与虚拟机栈，这次我们来聊一聊方法区与堆（Heap），还有本地方法栈。</p>
 <h3 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h3><p>简单的说本地方法栈我们没有必要了解太多，本地方法栈（Native Method Stack）的作用域虚拟机栈所发挥的作用类似，不过通过名字我们也能推测出，本地方法栈是用来执行Native方法的。它也会抛出stackOverflowerror和OutOfMemoryError。</p>
 <h3 id="堆Heap"><a href="#堆Heap" class="headerlink" title="堆Heap"></a>堆Heap</h3><p>我们先来看下这幅图先来了解下:</p>
-<img src="/blob/blob/2019/01/13/JVM之运行时数据区（二）方法区与堆/2019/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
+<img src="/2019/01/13/JVM之运行时数据区（二）方法区与堆/01/13/JVM之运行时数据区（二）方法区与堆/逻辑图.png">
 <p>java中的堆是java虚拟机中所管理的内存中最大的一块。从上面的图片中我们可以按到。<font color="red">java Heap是被线程共享的</font>。在java虚拟机规范中说明：所有对象实例以及数组都要在堆上进行分配，但是随着JIT编译器的发展与逃逸分析技术的逐渐成熟，栈上分配、标量替换技术将会导致一些微妙的变化发生，所有对象都分配在堆上也不在那么绝对了，也就是说<font color="red">堆是用来存放对象的空间，几乎所有的对象都存储在堆中</font>。</p>
 <p>我们也通过我所画的图形颜色可以看出java中的堆分为新生代与老年代，而新生代有分为Eden空间，From Survivor空间、To Survivor空间，也就是上图中的Eden、s0、s1。</p>
 <p>我们在这里先简单介绍下几个概念，至于新生代，老年代以及Eden 与survivor之间的比例如何划分，还有对象如何存放的，我们会在后面的垃圾回收器中会讲到内存的分配策略。</p>
@@ -609,12 +609,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/blob/2019/01/13/JVM之运行时数据区（二）方法区与堆/">JVM之运行时数据区（二）方法区与堆</a></p>
+  <p><span>本文标题:</span><a href="/2019/01/13/JVM之运行时数据区（二）方法区与堆/">JVM之运行时数据区（二）方法区与堆</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 wsylp 的个人博客">wsylp</a></p>
   <p><span>发布时间:</span>2019年01月13日 - 20:01</p>
   <p><span>最后更新:</span>2020年01月02日 - 10:01</p>
-  <p><span>原始链接:</span><a href="/blob/2019/01/13/JVM之运行时数据区（二）方法区与堆/" title="JVM之运行时数据区（二）方法区与堆">http://weisylp.gitee.io/blob/2019/01/13/JVM之运行时数据区（二）方法区与堆/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://weisylp.gitee.io/blob/2019/01/13/JVM之运行时数据区（二）方法区与堆/" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/2019/01/13/JVM之运行时数据区（二）方法区与堆/" title="JVM之运行时数据区（二）方法区与堆">http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://wsylp.top/2019/01/13/JVM之运行时数据区（二）方法区与堆/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">本文为 wsylp 版权所有</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -666,14 +666,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/blob/images/wechatpay.jpg" alt="wsylp 微信支付">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="wsylp 微信支付">
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/blob/images/alipay.jpg" alt="wsylp 支付宝">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="wsylp 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -692,13 +692,13 @@
       
         <div class="post-tags">
           
-            <a href="/blob/tags/JVM/" rel="tag"> <i class="fa fa-tag"></i> JVM</a>
+            <a href="/tags/JVM/" rel="tag"> <i class="fa fa-tag"></i> JVM</a>
           
-            <a href="/blob/tags/运行时数据区/" rel="tag"> <i class="fa fa-tag"></i> 运行时数据区</a>
+            <a href="/tags/运行时数据区/" rel="tag"> <i class="fa fa-tag"></i> 运行时数据区</a>
           
-            <a href="/blob/tags/Java-Heap/" rel="tag"> <i class="fa fa-tag"></i> Java Heap</a>
+            <a href="/tags/Java-Heap/" rel="tag"> <i class="fa fa-tag"></i> Java Heap</a>
           
-            <a href="/blob/tags/方法区/" rel="tag"> <i class="fa fa-tag"></i> 方法区</a>
+            <a href="/tags/方法区/" rel="tag"> <i class="fa fa-tag"></i> 方法区</a>
           
         </div>
       
@@ -711,7 +711,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blob/2019/01/13/JVM之运行时数据区（一）程序计数器与虚拟机栈/" rel="next" title="JVM之运行时数据区（一）程序计数器与虚拟机栈">
+              <a href="/2019/01/13/JVM之运行时数据区（一）程序计数器与虚拟机栈/" rel="next" title="JVM之运行时数据区（一）程序计数器与虚拟机栈">
                 <i class="fa fa-chevron-left"></i> JVM之运行时数据区（一）程序计数器与虚拟机栈
               </a>
             
@@ -721,7 +721,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blob/2019/05/27/Spring-Boot初体验（一）快速入门/" rel="prev" title="Spring Boot初体验（一）快速入门">
+              <a href="/2019/05/27/Spring-Boot初体验（一）快速入门/" rel="prev" title="Spring Boot初体验（一）快速入门">
                 Spring Boot初体验（一）快速入门 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -782,7 +782,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/blob/images/wsylp.jpg" alt="wsylp">
+              <img class="site-author-image" itemprop="image" src="/images/wsylp.jpg" alt="wsylp">
             
               <p class="site-author-name" itemprop="name">wsylp</p>
               <p class="site-description motion-element" itemprop="description">天行健，君子以自强不息</p>
@@ -793,7 +793,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/blob/archives/">
+                  <a href="/archives/">
                 
                     <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">日志</span>
@@ -805,7 +805,7 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/blob/categories/index.html">
+                  <a href="/categories/index.html">
                     
                     
                       
@@ -848,7 +848,7 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  <a href="/blob/tags/index.html">
+                  <a href="/tags/index.html">
                     
                     
                       
@@ -927,7 +927,7 @@
 
           
             <div class="feed-link motion-element">
-              <a href="/blob/atom.xml" rel="alternate">
+              <a href="/atom.xml" rel="alternate">
                 <i class="fa fa-rss"></i>
                 RSS
               </a>
@@ -1118,7 +1118,7 @@
     
       
   
-  <script type="text/javascript" color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/blob/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script type="text/javascript" color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -1134,49 +1134,49 @@
 
   
   
-    <script type="text/javascript" src="/blob/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/blob/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/blob/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
-
-
-  
-
-
-  <script type="text/javascript" src="/blob/js/src/utils.js?v=6.6.0"></script>
-
-  <script type="text/javascript" src="/blob/js/src/motion.js?v=6.6.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/blob/js/src/affix.js?v=6.6.0"></script>
-
-  <script type="text/javascript" src="/blob/js/src/schemes/pisces.js?v=6.6.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/blob/js/src/scrollspy.js?v=6.6.0"></script>
-<script type="text/javascript" src="/blob/js/src/post-details.js?v=6.6.0"></script>
-
 
 
   
 
 
-  <script type="text/javascript" src="/blob/js/src/bootstrap.js?v=6.6.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
 
 
 
@@ -1208,7 +1208,7 @@
     } else if (/json$/i.test(search_path)) {
       isXml = false;
     }
-    var path = "/blob/" + search_path;
+    var path = "/" + search_path;
     // monitor main search box;
 
     var onPopupClose = function (e) {
@@ -1564,5 +1564,5 @@
   
   
   
-<script src="/blob/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blob/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":280,"height":600},"mobile":{"show":false},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":280,"height":600},"mobile":{"show":false},"log":false});</script></body>
 </html>
