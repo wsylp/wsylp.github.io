@@ -23,6 +23,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[委托模式]]></title>
+    <url>%2F2020%2F06%2F07%2F%E5%A7%94%E6%89%98%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[委托模式介绍非23中设计模式，面向对象设计模式中常用的一种模式。干活时你的（被委托人），功劳是我的（委托人）参与人：委托与被委托委托人与被委托人在权力上平等（实现同一个接口）委托人持有被委托人的引用不关心过程只关心结果生活举例：开发小程序：现该公司需要开发一个”设计模式”的小程序,归小强（小强小强我最强）项目组开发。此时项目经理将该任务委托给小小强去开发。接口：DevCode.java123456789101112package org.springframework.tests.patterns;/** * 接口 * @author Administrator */public interface DevCode &#123; //开发小程序 void devMiniApps();&#125;项目经理小强1234567891011121314151617package org.springframework.tests.patterns;/** * 项目经理小强 * @author Administrator */public class XiaoQiang implements DevCode &#123; private final XiaoXiaoQiang qiang = new XiaoXiaoQiang(); @Override public void devMiniApps() &#123; //开发小程序 this.qiang.devMiniApps(); &#125;&#125;小强项目组开发人员12345678910111213141516171819202122package org.springframework.tests.patterns;/** * 小小强开发人员 * @author Administrator */public class XiaoXiaoQiang implements DevCode &#123; @Override public void devMiniApps() &#123; System.out.println("我是苦逼的小小强............."); System.out.println("分析需求............."); System.out.println("搭建框架............."); System.out.println("加班加班我最强............."); System.out.println("测试万岁............."); System.out.println("业务验收............."); System.out.println("与产品经理打了一架，继续加班............."); System.out.println("聪明如我开发完成............."); &#125;&#125;测试：12345678910111213141516171819202122package org.springframework.tests.patterns;/** * * @author Administrator */public class TestDev &#123; public static void main(String[] args) &#123; new XiaoQiang().devMiniApps(); &#125;&#125;===结果我是苦逼的小小强.............分析需求.............搭建框架.............加班加班我最强.............测试万岁.............业务验收.............与产品经理打了一架，继续加班.............聪明如我开发完成.............为什么使用委托模式解耦,委托解耦简单说就是把产生事件的代码和处理事件的代码通过委托者给隔离开来。“委托变量（方法答名）可以作为函数参数的形式传入到一个函数中”，只要增加一个新的处理方法就可。委托带来的程序扩展性的提升。在spring中用委托模式进行解耦，来进行达到了灵活的使用。应用场景实现了松耦]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>委托模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[类装载器]]></title>
     <url>%2F2020%2F06%2F07%2F%E7%B1%BB%E8%A3%85%E8%BD%BD%E5%99%A8%2F</url>
     <content type="text"><![CDATA[类装载器将类装在到JVM需要以下步骤：装载：查找和导入Class文件链接：执行校验、准备和解析步骤，其中解析步骤是可以选择的。校验：检查载入的class文件数据的正确性 准备：给类的静态变量分配存储空间。 解析：将符号引用转换为直接引用。 初始化：对类的静态变量、静态代码块执行初始化工作。分为三个类装载器：根装载器、ExtClassLoader（扩展类装载器）和AppClassLoader(应用类装载器)ExtClassLoader：进行装载JRE扩展目录ext中的JAR包AppClassLoader：进行装载Classpath路径下的类包。三者关系：根加载器是扩展类装载器的父类，扩展类装载器是应用装载器的父类。在装载时采用的时“全盘负责委托机制”，全盘负责：就是当一个ClassLoader装载一个类时，除非显式的使用另一个ClassLoader,该类所依赖及引用的类也有这个ClassLoader载入；委托机制：至先委托父类装载器寻找目标，只有找不到的情况下才从自己的类路径中查找并装载目标类。java的反射机制]]></content>
@@ -31,6 +42,14 @@
       </categories>
       <tags>
         <tag>类装载器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[模板方法模式]]></title>
+    <url>%2F2020%2F06%2F07%2F%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[模板方法模式使用当我们要完成在某一细节层次一致的一个过程或一系列步骤，但其个别步骤在更详细的层次上的实现可能不同时，我们通常考虑模板方法模式来处理。模板方法模式：定义一个操作中的算法的骨架，而将一些步骤延迟到自雷中。模板方法使得自雷可以不改变一个算法的结构即可重新定义该算法的某些特定的步骤。当不变的与可变的额行为在方法的子类实现中进行混合，可以将不变的行为搬到单一的地方帮住子类拜托重复的不变的行为的纠缠。简单的说：就是执行固定的流程，中间步骤有差别，可以实现批量生产。优势提供了一个很好的代码复用平台。简单说下:在spring中的模板方法有JDBC连接。定义骨架 1.进行获取连接对象 、2.获取PreparedStatement 、3.参数封装、4.执行、5.返回结果不变的为1 3 4 5改变的为2，需要传入参数我们模仿下一个考试答题的案例12345678910111213141516171819202122public abstract class TestEnglish &#123; //不变的行为 public void questuion1() &#123; System.out.println("选择题1: 1+1 = () ; A:1 B:2 C:3 D:4"); &#125; public void questuion2() &#123; System.out.println("选择题2: 1+2 = () ; A:1 B:2 C:3 D:4"); &#125; public void questuion3() &#123; System.out.println("选择题3: 1+3 = () ; A:1 B:2 C:3 D:4"); &#125; //改变的行为 public String answer1() &#123; return ""; &#125;&#125;123456789public class StudentA extends TestEnglish &#123; @Override public String answer1()&#123; questuion1(); return "a"; &#125;&#125;12345678public class TestMain &#123; public static void main(String[] args) &#123; TestEnglish studentA = new StudentA(); String answer1 = studentA.answer1(); System.out.println(answer1); &#125;&#125;]]></content>
+      <tags>
+        <tag>设计模式</tag>
       </tags>
   </entry>
   <entry>
