@@ -1,3 +1,3 @@
-http://wsylp.top/2020/03/22/信贷知识与业务/
-http://wsylp.top/2020/03/22/日常学习回顾与汇总/
-http://wsylp.top/2019/08/21/deepin安装mysql/
+http://wsylp.top/2020/11/26/线程池攻略/
+http://wsylp.top/2020/08/24/学习敏捷/
+http://wsylp.top/2020/06/07/类装载器/
